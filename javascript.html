@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Concepts</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        // a. String methods
+        const str = "Hi, Deakin!";
+        appendToOutput("Original String: " + str);
+        appendToOutput("1. Uppercase: " + str.toUpperCase());
+        appendToOutput("2. Lowercase: " + str.toLowerCase());
+        appendToOutput("3. Length: " + str.length);
+        appendToOutput("4. Substring: " + str.substring(0, 5));
+        appendToOutput("5. Replace: " + str.replace("World", "JavaScript"));
+
+        // b. Number methods
+        const num = 42.567;
+        appendToOutput("\nOriginal Number: " + num);
+        appendToOutput("1. Fixed to 2 Decimal Places: " + num.toFixed(2));
+        appendToOutput("2. Integer Part: " + Math.floor(num));
+        appendToOutput("3. Absolute Value: " + Math.abs(num));
+        appendToOutput("4. Square Root: " + Math.sqrt(num));
+        appendToOutput("5. Random Number between 0 and 1: " + Math.random());
+
+        // c. Array methods
+        const fruits = ["Apple", "Pear", "Cherry", "Pineapple", 123, "Orange"];
+        appendToOutput("\nOriginal Array: " + JSON.stringify(fruits));
+        appendToOutput("1. Length: " + fruits.length);
+        appendToOutput("2. Push: " + fruits.push("Grapes"));
+        appendToOutput("3. Pop: " + fruits.pop());
+        appendToOutput("4. Index of 'Pear': " + fruits.indexOf("Banana"));
+        appendToOutput("5. Join as String: " + fruits.join(", "));
+
+        // d. Date methods
+        const now = new Date();
+        appendToOutput("\nCurrent Date: " + now);
+        appendToOutput("1. Get Full Year: " + now.getFullYear());
+        appendToOutput("2. Get Month (0-11): " + now.getMonth());
+        appendToOutput("3. Get Day of the Week (0-6): " + now.getDay());
+        appendToOutput("4. Get Hours: " + now.getHours());
+        appendToOutput("5. Get Minutes: " + now.getMinutes());
+
+        // e. Function methods
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+        appendToOutput("\nFunction Result: " + greet("Disha"));
+
+        function add(a, b) {
+            return a + b;
+        }
+        appendToOutput("Function Result: " + add(5, 7));
+
+        function appendToOutput(text) {
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML += "<p>" + text + "</p>";
+        }
+    </script>
+</body>
+</html>
